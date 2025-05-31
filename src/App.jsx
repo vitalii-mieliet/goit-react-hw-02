@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Feedback from "./components/Feedback/Feedback";
 import Options from "./components/Options/Options";
 import Notification from "./components/Notification/Notification";
-// import Description from "./components/Description/Description";
+import Description from "./components/Description/Description";
 
 export default function App() {
   const initialState = {
@@ -12,7 +12,13 @@ export default function App() {
     bad: 0,
   };
 
-  const [feedback, setFeedback] = useState(initialState);
+  const [feedback, setFeedback] = useState(
+    () => JSON.parse(localStorage.getItem("feedback")) || initialState
+  );
+
+  useEffect(() => {
+    localStorage.setItem("feedback", JSON.stringify(feedback));
+  }, [feedback]);
 
   const totalFeedback = Object.values(feedback).reduce(
     (acc, value) => acc + value,
@@ -31,6 +37,7 @@ export default function App() {
 
   return (
     <>
+      <Description />
       <Options
         updateFeedback={updateFeedback}
         resetFeedbak={resetFeedbak}
