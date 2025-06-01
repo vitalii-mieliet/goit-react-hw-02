@@ -1,13 +1,13 @@
 .list {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 40px;
   justify-content: center;
 }
 .button {
-  min-width: 74px;
+  min-width: 70px;
   color: whitesmoke;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid lightskyblue;
   border-radius: 8px;
   &::first-letter {
