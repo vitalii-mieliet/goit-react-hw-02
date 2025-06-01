@@ -1,0 +1,26 @@
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  span {
+    display: block;
+    padding: 8px;
+  }
+}
+
+.item {
+  min-width: 70px;
+  color: whitesmoke;
+  border-radius: 8px;
+  border: 1px solid lightskyblue;
+}
+
+.label {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.quantity {
+}

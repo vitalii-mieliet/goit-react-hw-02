@@ -1,8 +1,9 @@
+import style from "./Description.module.css";
 export default function Description() {
   return (
-    <div>
-      <h1>Sip Happens Café</h1>
-      <p>
+    <div className={style.container}>
+      <h1 className={style.title}>Sip Happens Café</h1>
+      <p className={style.paragraph}>
         Please leave your feedback about our service by selecting one of the
         options below.
       </p>

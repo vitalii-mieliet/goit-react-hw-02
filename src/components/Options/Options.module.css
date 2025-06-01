@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+.button {
+  min-width: 74px;
+  color: whitesmoke;
+  padding: 8px;
+  border: 1px solid lightskyblue;
+  border-radius: 8px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.resetButton {
+  composes: button;
+  background-color: rgb(208, 75, 75);
+  font-weight: bold;
+}

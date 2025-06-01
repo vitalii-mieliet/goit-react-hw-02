@@ -49,7 +49,7 @@ export default function App() {
           feedback={[
             ...Object.entries(feedback),
             ["total", totalFeedback],
-            ["positive", positiveFeedback],
+            ["positive", positiveFeedback + "%"],
           ]}
         />
       ) : (

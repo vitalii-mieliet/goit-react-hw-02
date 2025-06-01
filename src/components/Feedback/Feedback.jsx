@@ -1,10 +1,11 @@
+import style from "./Feedback.module.css";
 export default function Feedback({ feedback }) {
   return (
-    <ul>
+    <ul className={style.list}>
       {feedback.map(([type, value]) => (
-        <li key={type}>
-          <span>{type}: </span>
-          <span>{value}</span>
+        <li className={style.item} key={type}>
+          <span className={style.label}>{type} </span>
+          <span className={style.quantity}>{value}</span>
         </li>
       ))}
     </ul>
